@@ -42,6 +42,44 @@ Required fields:
 - `sourceUrl`
 - `license`
 
+
+### 3.1) Example game entry (copy/paste)
+
+Add this object inside `data/games.json` (comma-separated with other entries):
+
+```json
+{
+  "slug": "example-hextris",
+  "title": "Example Hextris",
+  "description": "Fast puzzle game example entry.",
+  "thumbnail": "/thumbnails/hextris.svg",
+  "category": "Puzzle",
+  "tags": ["puzzle", "arcade"],
+  "mode": "external",
+  "embedUrl": "",
+  "playUrl": "https://hextris.github.io/hextris/",
+  "sourceUrl": "https://github.com/Hextris/hextris",
+  "license": "GPL-3.0"
+}
+```
+
+### 3.2) File types you can use
+
+- `data/games.json` → **JSON** file that stores all game metadata.
+- `public/thumbnails/*` → image files like **.svg**, **.png**, **.jpg**, **.webp**.
+- Game pages/components → **.tsx** React/Next files (`app/*`, `components/*`).
+
+### 3.3) How games are imported in code
+
+This project imports games directly from JSON in `app/page.tsx` and `app/game/[slug]/page.tsx`:
+
+```ts
+import games from "@/data/games.json";
+```
+
+- Home page passes `games` into `GameGrid` to render cards.
+- Dynamic page finds a game by `slug` and renders that game's details.
+
 ### 4) Deploy on Vercel (beginner flow)
 
 1. Push this repo to GitHub.
