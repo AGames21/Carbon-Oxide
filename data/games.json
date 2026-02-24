@@ -92,6 +92,8 @@
     "playUrl": "https://itch.io/games/tag-racing/tag-html5",
     "sourceUrl": "https://itch.io",
     "license": "Per-game terms"
+  },
+  {    
     "slug": "web-chess",
     "title": "Web Chess",
     "description": "Browser chess game for fast matches.",
