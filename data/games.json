@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "hextris",
+    "title": "Hextris",
+    "description": "A fast, arcade-style hex puzzle game.",
+    "thumbnail": "/thumbnails/hextris.svg",
+    "category": "Puzzle",
+    "tags": ["puzzle", "arcade"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://hextris.github.io/hextris/",
+    "sourceUrl": "https://github.com/Hextris/hextris",
+    "license": "GPL-3.0"
+  },
+  {
+    "slug": "x2048",
+    "title": "2048",
+    "description": "Combine numbers to hit 2048 and beyond.",
+    "thumbnail": "/thumbnails/2048.svg",
+    "category": "Puzzle",
+    "tags": ["puzzle", "numbers"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://play2048.co/",
+    "sourceUrl": "https://github.com/gabrielecirulli/2048",
+    "license": "MIT"
+  },
+  {
+    "slug": "open-snake",
+    "title": "Open Snake",
+    "description": "Classic snake with modern controls.",
+    "thumbnail": "/thumbnails/snake.svg",
+    "category": "Arcade",
+    "tags": ["arcade", "retro"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://playsnake.org/",
+    "sourceUrl": "https://github.com/kubowania/snake",
+    "license": "MIT"
+  },
+  {
+    "slug": "web-chess",
+    "title": "Web Chess",
+    "description": "Browser chess game for fast matches.",
+    "thumbnail": "/thumbnails/chess.svg",
+    "category": "Board",
+    "tags": ["board", "strategy"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://www.chess.com/play/computer",
+    "sourceUrl": "https://www.chess.com",
+    "license": "Third-party terms"
+  },
+  {
+    "slug": "space-shooter",
+    "title": "Space Shooter",
+    "description": "An open arcade-style shooter demo.",
+    "thumbnail": "/thumbnails/shooter.svg",
+    "category": "Action",
+    "tags": ["action", "shooter"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://html5.gamemonetize.com/4l58ynkxyq9v0ijxehs8r0xfh5m5cnnm/",
+    "sourceUrl": "https://gamemonetize.com",
+    "license": "Third-party terms"
+  },
+  {
+    "slug": "racing-run",
+    "title": "Racing Run",
+    "description": "Simple endless racing browser game.",
+    "thumbnail": "/thumbnails/racing.svg",
+    "category": "Racing",
+    "tags": ["racing", "endless"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://www.crazygames.com/game/madalin-cars-multiplayer",
+    "sourceUrl": "https://www.crazygames.com",
+    "license": "Third-party terms"
+  }
+]
