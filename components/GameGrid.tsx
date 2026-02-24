@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { GameCard } from "./GameCard";
+import type { Game } from "./types";
 import type { Game } from "./types";
 import { GameCard } from "./GameCard";
 
@@ -14,6 +16,9 @@ export function GameGrid({ games }: { games: Game[] }) {
     () =>
       games.filter((game) => {
         const matchesCategory = category === "All" || game.category === category;
+        const q = search.toLowerCase().trim();
+        const matchesSearch =
+          !q ||
         const q = search.toLowerCase();
         const matchesSearch =
           game.title.toLowerCase().includes(q) ||
@@ -31,6 +36,7 @@ export function GameGrid({ games }: { games: Game[] }) {
         placeholder="Search games, tags, genres..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
+        aria-label="Search games"
       />
       <div className="filters">
         {categories.map((c) => (
@@ -39,6 +45,15 @@ export function GameGrid({ games }: { games: Game[] }) {
           </button>
         ))}
       </div>
+      {filtered.length === 0 ? (
+        <p>No games match your current filters. Try another category or search term.</p>
+      ) : (
+        <div className="grid">
+          {filtered.map((game) => (
+            <GameCard key={game.slug} game={game} />
+          ))}
+        </div>
+      )}
       <div className="grid">
         {filtered.map((game) => (
           <GameCard key={game.slug} game={game} />

@@ -71,6 +71,8 @@ a {
   margin: 14px 0 20px;
 }
 
+button,
+input {
 button, input {
   background: #0f172a;
   color: #e2e8f0;
@@ -90,4 +92,12 @@ button.active {
   border-radius: 10px;
   border: 1px solid #60a5fa;
   background: #1d4ed8;
+}
+
+.embedWrap {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  overflow: hidden;
 }
