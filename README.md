@@ -90,6 +90,36 @@ import games from "@/data/games.json";
 
 Done. Your hub is live.
 
+### 4.1) Exact Vercel New Project selections
+
+On the Vercel **New Project** screen, use these exact values:
+
+- **Git Repository**: `AGames21/Carbon-Oxide` (or your fork)
+- **Project Name**: `Carbon-Oxide` (or any name you want)
+- **Application Preset**: `Next.js`
+- **Root Directory**: `./`
+- **Build Command**: leave default (`next build` / `npm run build`)
+- **Output Directory**: leave default (`Next.js default`)
+- **Install Command**: leave default (`npm install`)
+
+Environment variables:
+
+- You do **not** need env vars for the current starter version.
+- Leave the Key/Value section empty unless you add features that require secrets later.
+
+Then click **Deploy**.
+
+### 4.2) If Vercel asks to edit settings
+
+Use this quick fallback:
+
+- Framework: `Next.js`
+- Build command: `npm run build`
+- Install command: `npm install`
+- Output directory: blank/default
+- Node version: default from Vercel
+
+
 ---
 
 ## What this project already includes
