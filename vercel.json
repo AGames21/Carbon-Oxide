@@ -1,7 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "cleanUrls": true,
-  "installCommand": "npm install",
-  "buildCommand": "npm run verify && npm run build"
+  "cleanUrls": true
 }
