@@ -3,6 +3,15 @@ import { notFound } from "next/navigation";
 import games from "@/data/games.json";
 import type { Game } from "@/components/types";
 
+const gameList = games as Game[];
+
+export function generateStaticParams() {
+  return gameList.map((game) => ({ slug: game.slug }));
+}
+
+export default function GamePage({ params }: { params: { slug: string } }) {
+  const game = gameList.find((entry) => entry.slug === params.slug);
+
 export function generateStaticParams() {
   return (games as Game[]).map((game) => ({ slug: game.slug }));
 }
@@ -24,6 +33,10 @@ export default function GamePage({ params }: { params: { slug: string } }) {
         Category: <strong>{game.category}</strong>
       </p>
       <p>
+        Source:{" "}
+        <a href={game.sourceUrl} target="_blank" rel="noreferrer">
+          {game.sourceUrl}
+        </a>
         Source: <a href={game.sourceUrl} target="_blank" rel="noreferrer">{game.sourceUrl}</a>
         Source: <a href={game.sourceUrl}>{game.sourceUrl}</a>
       </p>

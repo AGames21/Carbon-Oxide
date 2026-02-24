@@ -138,6 +138,9 @@ python -m json.tool data/games.json >/dev/null
 # 2) check for merge conflict markers
 rg '<<<<<<<|=======|>>>>>>>' app components data README.md
 
+# 3) install, verify, and build locally
+npm install
+npm run verify
 # 3) install and build locally
 npm install
 npm run build
