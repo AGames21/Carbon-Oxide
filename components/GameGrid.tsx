@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 import { GameCard } from "./GameCard";
 import type { Game } from "./types";
+import type { Game } from "./types";
+import { GameCard } from "./GameCard";
 
 export function GameGrid({ games }: { games: Game[] }) {
   const [search, setSearch] = useState("");
@@ -17,6 +19,8 @@ export function GameGrid({ games }: { games: Game[] }) {
         const q = search.toLowerCase().trim();
         const matchesSearch =
           !q ||
+        const q = search.toLowerCase();
+        const matchesSearch =
           game.title.toLowerCase().includes(q) ||
           game.description.toLowerCase().includes(q) ||
           game.tags.some((t) => t.toLowerCase().includes(q));
@@ -50,6 +54,11 @@ export function GameGrid({ games }: { games: Game[] }) {
           ))}
         </div>
       )}
+      <div className="grid">
+        {filtered.map((game) => (
+          <GameCard key={game.slug} game={game} />
+        ))}
+      </div>
     </>
   );
 }
