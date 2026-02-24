@@ -2,6 +2,7 @@
 
 A ready-to-deploy **Next.js games hub** with searchable cards and dynamic game pages.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/Carbon-Oxide)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AGames21/Carbon-Oxide)
 
 > Replace `your-username` in the button URL above with your actual GitHub username/org after you push the repo.
@@ -118,6 +119,31 @@ Use this quick fallback:
 - Install command: `npm install`
 - Output directory: blank/default
 - Node version: default from Vercel
+
+
+### 4.3) Troubleshooting common Vercel build errors
+
+If Vercel fails with syntax/JSON parse errors like:
+
+- `Unexpected token main` in `app/game/[slug]/page.tsx`
+- `Expression expected` in `components/GameGrid.tsx`
+- `Cannot parse JSON` in `data/games.json`
+
+Do this locally before pushing:
+
+```bash
+# 1) check JSON validity
+python -m json.tool data/games.json >/dev/null
+
+# 2) check for merge conflict markers
+rg '<<<<<<<|=======|>>>>>>>' app components data README.md
+
+# 3) install and build locally
+npm install
+npm run build
+```
+
+If step 2 prints anything, you still have an unresolved merge conflict. Remove duplicated lines/conflict markers and rebuild.
 
 
 ---
