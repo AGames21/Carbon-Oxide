@@ -149,6 +149,19 @@ npm run build
 If step 2 prints anything, you still have an unresolved merge conflict. Remove duplicated lines/conflict markers and rebuild.
 
 
+
+### 4.4) Important: deploy the latest commit
+
+Your failing logs show commit `008839c` and `next@14.2.5`.
+That means Vercel is building an older commit, not the fixed one.
+
+Before redeploy:
+
+1. Push latest commit to `main`.
+2. In Vercel, open project → **Deployments** → redeploy latest commit.
+3. Use **Redeploy without cache** once after big merge/conflict fixes.
+4. Confirm build logs show `next@14.2.33` and `npm run verify` running before build.
+
 ---
 
 ## What this project already includes
