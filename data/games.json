@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "hextris",
+    "title": "Hextris",
+    "description": "Fast-paced open-source puzzle arcade game.",
+    "thumbnail": "/thumbnails/hextris.svg",
+    "category": "Puzzle",
+    "tags": ["puzzle", "arcade", "opensource"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://hextris.github.io/hextris/",
+    "sourceUrl": "https://github.com/Hextris/hextris",
+    "license": "GPL-3.0"
+  },
+  {
+    "slug": "x2048",
+    "title": "2048 (Original Open Source)",
+    "description": "Merge tiles to reach 2048 in the classic open-source version.",
+    "thumbnail": "/thumbnails/2048.svg",
+    "category": "Puzzle",
+    "tags": ["puzzle", "numbers", "opensource"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://play2048.co/",
+    "sourceUrl": "https://github.com/gabrielecirulli/2048",
+    "license": "MIT"
+  },
+  {
+    "slug": "open-snake",
+    "title": "Open Snake",
+    "description": "Simple snake game clone for quick rounds.",
+    "thumbnail": "/thumbnails/snake.svg",
+    "category": "Arcade",
+    "tags": ["arcade", "retro", "opensource"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://github.com/kubowania/snake",
+    "sourceUrl": "https://github.com/kubowania/snake",
+    "license": "MIT"
+  },
+  {
+    "slug": "tetris-clone",
+    "title": "Open Tetris Clone",
+    "description": "An open-source browser tetris-style project.",
+    "thumbnail": "/thumbnails/tetris.svg",
+    "category": "Arcade",
+    "tags": ["arcade", "blocks", "opensource"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://github.com/CodeExplainedRepo/Tetris-JavaScript",
+    "sourceUrl": "https://github.com/CodeExplainedRepo/Tetris-JavaScript",
+    "license": "MIT"
+  },
+  {
+    "slug": "chess-openings",
+    "title": "Chess (Play + Learn)",
+    "description": "A chess destination for strategy fans.",
+    "thumbnail": "/thumbnails/chess.svg",
+    "category": "Board",
+    "tags": ["board", "strategy"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://lichess.org/",
+    "sourceUrl": "https://lichess.org",
+    "license": "Third-party terms"
+  },
+  {
+    "slug": "racing-category",
+    "title": "Racing Collection",
+    "description": "Starter slot for your approved racing game links.",
+    "thumbnail": "/thumbnails/racing.svg",
+    "category": "Racing",
+    "tags": ["racing", "collection"],
+    "mode": "external",
+    "embedUrl": "",
+    "playUrl": "https://itch.io/games/tag-racing/tag-html5",
+    "sourceUrl": "https://itch.io",
+    "license": "Per-game terms"
+  }
+]
