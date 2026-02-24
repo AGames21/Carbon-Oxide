@@ -10,6 +10,7 @@ export function generateStaticParams() {
 export default function GamePage({ params }: { params: { slug: string } }) {
   const game = (games as Game[]).find((g) => g.slug === params.slug);
 
+  if (!game) notFound();
   if (!game) {
     notFound();
   }
@@ -23,11 +24,22 @@ export default function GamePage({ params }: { params: { slug: string } }) {
         Category: <strong>{game.category}</strong>
       </p>
       <p>
+        Source: <a href={game.sourceUrl} target="_blank" rel="noreferrer">{game.sourceUrl}</a>
         Source: <a href={game.sourceUrl}>{game.sourceUrl}</a>
       </p>
       <p>License/Terms: {game.license}</p>
 
       {game.mode === "embed" && game.embedUrl ? (
+        <div className="embedWrap">
+          <iframe
+            src={game.embedUrl}
+            title={game.title}
+            width="100%"
+            height="100%"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer"
+          />
         <div style={{ aspectRatio: "16/9", width: "100%", border: "1px solid #334155", borderRadius: "14px", overflow: "hidden" }}>
           <iframe src={game.embedUrl} title={game.title} width="100%" height="100%" allowFullScreen />
         </div>
