@@ -11,6 +11,9 @@ export default function GamePage({ params }: { params: { slug: string } }) {
   const game = (games as Game[]).find((g) => g.slug === params.slug);
 
   if (!game) notFound();
+  if (!game) {
+    notFound();
+  }
 
   return (
     <main className="container">
@@ -22,6 +25,7 @@ export default function GamePage({ params }: { params: { slug: string } }) {
       </p>
       <p>
         Source: <a href={game.sourceUrl} target="_blank" rel="noreferrer">{game.sourceUrl}</a>
+        Source: <a href={game.sourceUrl}>{game.sourceUrl}</a>
       </p>
       <p>License/Terms: {game.license}</p>
 
@@ -36,6 +40,8 @@ export default function GamePage({ params }: { params: { slug: string } }) {
             loading="lazy"
             referrerPolicy="no-referrer"
           />
+        <div style={{ aspectRatio: "16/9", width: "100%", border: "1px solid #334155", borderRadius: "14px", overflow: "hidden" }}>
+          <iframe src={game.embedUrl} title={game.title} width="100%" height="100%" allowFullScreen />
         </div>
       ) : (
         <a className="playBtn" href={game.playUrl} target="_blank" rel="noreferrer">
