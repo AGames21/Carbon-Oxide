@@ -3,6 +3,7 @@
 A ready-to-deploy **Next.js games hub** with searchable cards and dynamic game pages.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/Carbon-Oxide)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AGames21/Carbon-Oxide)
 
 > Replace `your-username` in the button URL above with your actual GitHub username/org after you push the repo.
 
@@ -140,6 +141,8 @@ rg '<<<<<<<|=======|>>>>>>>' app components data README.md
 # 3) install, verify, and build locally
 npm install
 npm run verify
+# 3) install and build locally
+npm install
 npm run build
 ```
 
